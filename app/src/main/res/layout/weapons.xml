@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/buttons"
+    android:foregroundGravity="fill_horizontal|fill_vertical|fill"
+    android:gravity="fill"
+    android:orientation="horizontal"
+    android:baselineAligned="false"
+    tools:showIn="@layout/activity_main2">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="5dp">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/umi"
+            android:onClick="playSound"
+            android:src="@drawable/umi"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/uncleGe"
+            android:onClick="playSound"
+            android:src="@drawable/ge_ping"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/vanYoung"
+            android:onClick="playSound"
+            android:src="@drawable/van_young"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/lanLanLu"
+            android:onClick="playSound"
+            android:src="@drawable/lan_lan_lu"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/ahFuckYou"
+            android:onClick="playSound"
+            android:src="@drawable/ah_fuck_you"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/whatDoYouWantToDo"
+            android:onClick="playSound"
+            android:src="@drawable/what_do_you_want_to_do"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/haHaHa"
+            android:onClick="playSound"
+            android:src="@drawable/ha_ha_ha"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/jinKeLa"
+            android:onClick="playSound"
+            android:src="@drawable/jin_ke_la"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/agricultureNotGood"
+            android:onClick="playSound"
+            android:src="@drawable/agriculture_not_good"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/shortInResource"
+            android:onClick="playSound"
+            android:src="@drawable/short_in_resource"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/iDoWorkFromMyHeart"
+            android:onClick="playSound"
+            android:src="@drawable/i_do_work_from_my_heart"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="left"
+        android:weightSum="1"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/turnOnLastYear"
+            android:onClick="playSound"
+            android:src="@drawable/turn_on_last_year"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/sheJingEarly"
+            android:onClick="playSound"
+            android:src="@drawable/she_jing_early"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/pieces"
+            android:onClick="playSound"
+            android:src="@drawable/pieces"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/angryMeDie"
+            android:onClick="playSound"
+            android:src="@drawable/angry_me_die"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/iWentToHeBei"
+            android:onClick="playSound"
+            android:src="@drawable/i_went_to_he_bei"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/dontFight"
+            android:onClick="playSound"
+            android:src="@drawable/dont_fight"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/southFly"
+            android:onClick="playSound"
+            android:src="@drawable/south_fly"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/destroyHate"
+            android:onClick="playSound"
+            android:src="@drawable/destroy_hate"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/chaoNiA"
+            android:onClick="playSound"
+            android:src="@drawable/chao_ni_a"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/nongSi"
+            android:onClick="playSound"
+            android:src="@drawable/nong_si"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/haveJieCao"
+            android:onClick="playSound"
+            android:src="@drawable/have_jie_cao"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:measureWithLargestChild="true"
+        android:foregroundGravity="center_vertical"
+        android:weightSum="1"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/nico"
+            android:onClick="playSound"
+            android:src="@drawable/nico"
+            style="@style/icon_style"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/uncleGeWa"
+            android:src="@drawable/ge_ping_wa"
+            android:onClick="playSound"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/fa"
+            android:onClick="playSound"
+            android:src="@drawable/van_young_short"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/comeOn"
+            android:onClick="playSound"
+            android:src="@drawable/come_on"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/yourAss"
+            android:onClick="playSound"
+            android:src="@drawable/your_ass"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/ya"
+            android:onClick="playSound"
+            android:src="@drawable/ya"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/thisWeek"
+            android:onClick="playSound"
+            android:src="@drawable/this_week"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/fuckBilly"
+            android:onClick="playSound"
+            android:src="@drawable/fuck_billy"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/gay"
+            android:onClick="playSound"
+            android:src="@drawable/gay"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/threeYearsKid"
+            android:onClick="playSound"
+            android:src="@drawable/three_years_kid"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/iFeelSoGood"
+            android:onClick="playSound"
+            android:src="@drawable/i_feel_so_good"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="right"
+        android:weightSum="1"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/yaShiLa"
+            android:src="@drawable/ya_shi_la"
+            android:onClick="playSound"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/door"
+            android:src="@drawable/door"
+            android:onClick="playSound"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/misakaMikoto"
+            android:src="@drawable/misaka_mikoto"
+            android:onClick="playSound"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/letsGo"
+            android:src="@drawable/lets_go"
+            android:onClick="playSound"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/yeahAh"
+            android:src="@drawable/yeah_ah"
+            android:onClick="playSound"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/billy"
+            android:onClick="playSound"
+            android:src="@drawable/king_billy"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/bigHipDividing"
+            android:onClick="playSound"
+            android:src="@drawable/big_hip_dividing"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/niMas"
+            android:onClick="playSound"
+            android:src="@drawable/ni_mas"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/mrsSao"
+            android:onClick="playSound"
+            android:src="@drawable/mrs_sao"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/whatHappens"
+            android:onClick="playSound"
+            android:src="@drawable/what_happens"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

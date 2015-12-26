@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:alpha="1"
+    android:id="@+id/thisIsMe"
+    android:layout_weight="0.25"
+    tools:showIn="@layout/activity_option">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/test_mode"
+            android:id="@+id/testMode"
+            android:onClick="onChooseOptions"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:layout_weight="1"
+            android:background="@drawable/button_on_click1"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/record_mode"
+            android:id="@+id/recordMode"
+            android:onClick="onChooseOptions"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/button_on_click1"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/challenge_mode"
+            android:id="@+id/challengeMode"
+            android:onClick="onChooseOptions"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:layout_weight="1"
+            android:background="@drawable/button_on_click1"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/about_me"
+            android:id="@+id/aboutMe"
+            android:onClick="onChooseOptions"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:layout_weight="1"
+            android:background="@drawable/button_on_click1"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/my_records"
+            android:id="@+id/myRecords"
+            android:onClick="onChooseOptions"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:layout_weight="1"
+            android:background="@drawable/button_on_click1"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/settings"
+            android:id="@+id/settings"
+            android:onClick="onChooseOptions"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:layout_weight="1"
+            android:background="@drawable/button_on_click1"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp" />
+    </LinearLayout>
+</LinearLayout>

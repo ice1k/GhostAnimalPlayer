@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="player.comet.tesla.ghostanimalplayer.MainActivity"
+    android:background="#56c7c9">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_above="@+id/scrollView"
+        android:background="#00ffffff"
+        android:layout_alignParentTop="true"
+        android:id="@+id/scrollView2"
+        android:layout_toLeftOf="@+id/chooseOptions"
+        android:layout_toStartOf="@+id/chooseOptions">
+
+        <include layout="@layout/weapons" />
+    </ScrollView>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:id="@+id/scrollView"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="#00ffffff">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/start_music_huiyecheng"
+                android:id="@+id/startBGMHuiYeCity"
+                android:onClick="playBGM"
+                android:textColor="#5770c8" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/start_music_finally_animal_sister"
+                android:onClick="playBGM"
+                android:textColor="#5770c8"
+                android:id="@+id/startBGMFinallyAnimalSister" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/stop_music"
+                android:onClick="playBGM"
+                android:id="@+id/stopMusic"
+                android:textColor="#5770c8"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/optionsMenu"
+        android:visibility="invisible"
+        tools:visibility="visible"
+        android:layout_below="@+id/chooseOptions"
+        android:layout_alignRight="@+id/scrollView2"
+        android:layout_alignEnd="@+id/scrollView2">
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="@string/start"
+            android:id="@+id/start"
+            android:onClick="writeGhostAnimal"
+            android:layout_weight="1"
+            android:background="@drawable/button_on_click1"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="@string/read"
+            android:id="@+id/read"
+            android:onClick="readGhostAnimal"
+            android:layout_weight="1"
+            android:background="@drawable/button_on_click1"
+            android:gravity="center" />
+
+        <!--<TextView-->
+            <!--android:layout_width="70dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/stop"-->
+            <!--android:id="@+id/stop"-->
+            <!--android:onClick="stopPlaying"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/button_on_click1"-->
+            <!--android:gravity="center" />-->
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="@string/delete_all"
+            android:id="@+id/deleteAll"
+            android:onClick="deleteAll"
+            android:layout_weight="1"
+            android:background="@drawable/button_on_click1"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/abc_ic_menu_moreoverflow_mtrl_alpha"
+        android:id="@+id/chooseOptions"
+        android:layout_marginRight="-10dp"
+        android:onClick="showOptionsMenu" />
+
+</RelativeLayout>

@@ -1,0 +1,34 @@
+﻿<resources>
+    <string name="app_name">冰封の鬼畜</string>
+    <string name="start_music_huiyecheng">播放輝夜の城で踊りたい</string>
+    <string name="my_name">作者：千里冰封\n百度ID：@精灵谱尼</string>
+    <string name="start_music_iloveyou">播放愛してるばんざーい!</string>
+    <string name="start_music_fantastic_baby">播放电磁炮OP</string>
+    <string name="start_music_finally_animal_sister">播放U.N オ エンは彼女なのか</string>
+    <string name="stop_music">停止播放</string>
+    <string name="text_ghost_animal">是时候掀起一场\n新的鬼畜革命了</string>
+    <string name="please_turn_down_volume">本APP音量较大\n请注意把声音关小一点！</string>
+    <string name="start">录制</string>
+    <string name="read">播放</string>
+    <string name="stop">停止</string>
+    <string name="delete_all">清除</string>
+    <string name="test_mode">试音模式</string>
+    <string name="record_mode">录音模式</string>
+    <string name="about_me">关于作者</string>
+    <string name="challenge_mode">挑战模式</string>
+    <string name="not_available">当前功能暂未开放</string>
+    <string name="appreciate1">鸣谢\n创意提供&amp;iOS版制作：董海辰同学\n安卓版APP全部开发工作、90%的音源：千里冰封\n作者百度ID：@精灵谱尼\nUI设计与制作：为了做3D效果差点烧坏显卡的 @馃彠鈼\n录音系统创意：罗小衾\n\n</string>
+    <string name="appreciate2">特别感谢：\n我的好友：时光、Jerry、沧海、Timothy、苹果他们\n社团的同学们\n厕纸狂魔 @竹叶子兄\n我的朋友 @time昆少\n宅吧吧务 @long_smile3325\n\n</string>
+    <string name="appreciate3">我的严师：77.\n师出同门：留白、毛毛、梵音、88、66他们\n还有宅吧的那群死基佬，B站的那群损友们\n没有你们的陪伴就没有今天的我\n也谢谢大家对无脑科学的支持\n\n</string>
+    <string name="website">工作室官网(建设ing)</string>
+    <string name="teacher_blog">老师的blog(高能)</string>
+    <string name="b_station">作者视频合辑(无脑科学)</string>
+    <string name="by_me">——千里冰封</string>
+    <string name="welcome_to_click_these">欢迎点击以下链接</string>
+    <string name="my_records">我的作品</string>
+    <string name="loading">加载中</string>
+    <string name="settings">个人设置</string>
+    <string name="choose_ui">界面选择</string>
+    <string name="classic">经典</string>
+    <string name="windows">WinP</string>
+</resources>

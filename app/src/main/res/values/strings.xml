@@ -39,4 +39,11 @@
     <string name="ProgramLeague_discription">中学生编程社区~欢迎加入~注：加入者请端正自己的行为，百度能查到的问题统统不予回答\n</string>
     <string name="save">保存</string>
     <string name="empty">这里还什么都没有喔~</string>
+    <string name="i_am_gaing">↑ 作者鬼畜中\n\n</string>
+    <string name="rename">重命名：</string>
+    <string name="delete">删除(慎点)</string>
+    <string name="cancel">取消</string>
+    <string name="alarm">来自萌萌的冰封的提醒</string>
+    <string name="ask_again">冰封怕你点错了，再问你一遍：\n确定删除吗？</string>
+    <string name="sure">确定</string>
 </resources>

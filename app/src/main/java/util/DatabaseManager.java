@@ -12,14 +12,14 @@ import java.util.List;
 
 import static util.Constants.JSON;
 import static util.Constants.MY_TAG;
-import static util.DatabaseOperator.*;
+import static util.DatabaseOpenHelper.*;
 
 /**
  * Created by Administrator on 2015/12/14 0014.
  */
 public class DatabaseManager implements Closeable{
 
-    private DatabaseOperator helper;
+    private DatabaseOpenHelper helper;
     private SQLiteDatabase database;
 
     public DatabaseManager(Context context) {
@@ -27,20 +27,26 @@ public class DatabaseManager implements Closeable{
     }
 
     private void onCreate(Context context){
-        helper = new DatabaseOperator(context);
+        helper = new DatabaseOpenHelper(context);
 //        可读可写
         database = helper.getWritableDatabase();
 //        helper.close();
     }
 
+
 //    增加一组声音
-    public void addSounds(List<OneSound> sounds) {
+    public void addSounds(String groupName, List<OneSound> sounds) {
         database.beginTransaction();
         try{
-            for (int i = 0; i < sounds.size(); i++) {
-                OneSound sound = sounds.get(i);
-                database.execSQL(String.format("INSERT INTO '%s' VALUES('%s',%d,%d,%d)",
-                        TABLE_NAME, sound.name, sound.id, sound.time, i));
+            for (OneSound sound:sounds) {
+                ContentValues contentValues = new ContentValues();
+//                contentValues.put("name", sound.name);
+                contentValues.put("id", sound.id);
+                contentValues.put("time", sound.time);
+                contentValues.put("cnt", sound.cnt);
+                database.insert(groupName, null, contentValues);
+//                database.execSQL(String.format("INSERT INTO '%s' VALUES('%s',%d,%d,%d)",
+//                        TABLE_NAME, sound.name, sound.id, sound.time, i));
             }
             database.setTransactionSuccessful();
 //            database.endTransaction();
@@ -50,39 +56,42 @@ public class DatabaseManager implements Closeable{
         }
     }
 
-    public void addSound(OneSound sound) {
-        database.beginTransaction();
-        try{
-            database.execSQL(String.format("INSERT INTO '%s' VALUES('%s',%d,%d,%d)",
-                    TABLE_NAME, sound.name, sound.id, sound.time, sound.cnt));
-            database.setTransactionSuccessful();
-        } finally {
-            database.endTransaction();
-        }
+    public void addSound(String name, OneSound sound) {
+        ContentValues contentValues = new ContentValues();
+//        contentValues.put("name", sound.name);
+        contentValues.put("id", sound.id);
+        contentValues.put("time", sound.time);
+        contentValues.put("cnt", sound.cnt);
+        database.insert(name, null, contentValues);
+//        database.execSQL(String.format("INSERT INTO '%s' VALUES('%s',%d,%d,%d)",
+//                TABLE_NAME, sound.name, sound.id, sound.time, sound.cnt));
+
     }
 
     // 听说少产生一些对象会减少内存消耗？
     public void addSound(String name, int id, long time, int cnt) {
-        database.beginTransaction();
-        try{
-            database.execSQL(String.format("INSERT INTO '%s' VALUES('%s',%d,%d,%d)",
-                    TABLE_NAME, name, id, time, cnt));
-            database.setTransactionSuccessful();
-        } finally {
-            database.endTransaction();
-        }
+        ContentValues contentValues = new ContentValues();
+//        contentValues.put("name", name);
+        contentValues.put("id", id);
+        contentValues.put("time", time);
+        contentValues.put("cnt", cnt);
+        database.insert(name, null, contentValues);
+//        database.execSQL(String.format("INSERT INTO '%s' VALUES('%s',%d,%d,%d)",
+//                TABLE_NAME, name, id, time, cnt));
+
     }
 
     public String findSoundGroupName(){
 //        Cursor cursor = database.query(GROUP, null, null, null, null, null, null);
-        double i;
+        int i;
         String name ;
 //        boolean bool = true;
 //        while(bool){
-        i = Math.random();
-        name = String.format("%8s%s", i, JSON);
+        i = (int) (Math.random()*1000000);
+        name = String.format("%8s%d", JSON, i);
         ContentValues contentValues = new ContentValues();
         contentValues.put("name", name);
+        helper.createTable(database, name);
         database.insert(GROUP, null, contentValues);
 //            while(cursor.moveToNext()){
 //                if(cursor.getString(cursor.getColumnIndex("name")).equals(name)) {
@@ -97,25 +106,31 @@ public class DatabaseManager implements Closeable{
 
     public void deleteSoundGroup(String name){
         // 万恶的where表达式
-        database.delete(TABLE_NAME, "name = ?", new String[]{name});
+        database.delete(name, null, null);
+        database.execSQL("DROP TABLE " + name);
         database.delete(GROUP, "name = ?", new String[]{name});
     }
 
     public void renameSoundGroup(String oldName,String newName){
         ContentValues contentValues = new ContentValues();
-        contentValues.put(oldName,newName);
+        contentValues.put("name",newName);
         // 万恶的where表达式
-        database.update(TABLE_NAME, contentValues, "name = ?", new String[]{oldName});
-        database.update(GROUP, contentValues,"name = ?", new String[]{oldName});
+        database.update(GROUP, contentValues, "name = ?", new String[]{oldName});
+        database.execSQL("ALTER TABLE " + oldName + " RENAME TO " + newName);
     }
 
     public ArrayList<OneSound> querySounds(String name){
         ArrayList<OneSound> oneSoundArrayList = new ArrayList<>();
-        Cursor cursor = database.query(TABLE_NAME,
-                null, "name = ?", new String[]{name}, null, null, "cnt");
+//        Cursor cursor = database.query(TABLE_NAME,
+//                new String[]{"id", "time"}, "name = ?", new String[]{name}, null, null, "cnt");
+        Cursor cursor = database.query(name,
+                null, null,
+                null, null,
+                null, "cnt");
         while(cursor.moveToNext()){
+            Log.d(MY_TAG, "find one sound!!Yeah!!");
             oneSoundArrayList.add(new OneSound(
-                    cursor.getString(cursor.getColumnIndex("name")),
+//                    cursor.getString(cursor.getColumnIndex("name")),
                     cursor.getInt(cursor.getColumnIndex("id")),
                     cursor.getLong(cursor.getColumnIndex("time"))
                     // sound的顺序已经由游标本身确定了，所以不用构造
@@ -128,9 +143,12 @@ public class DatabaseManager implements Closeable{
     public String[] queryGroups(){
         ArrayList<String> namesList = new ArrayList<>();
         String[] names;
-        Cursor cursor = database.query(GROUP, null, null, null, null, null, null);
+        Cursor cursor = database.query(GROUP,
+                null, null,
+                null, null,
+                null, null);
         while(cursor.moveToNext()){
-            Log.d(MY_TAG,"cursor.getString(cursor.getColumnIndex(\"name\"))"
+            Log.d(MY_TAG,"cursor.getString(cursor.getColumnIndex(\"name\")) = "
                     + cursor.getString(cursor.getColumnIndex("name")));
             namesList.add(cursor.getString(cursor.getColumnIndex("name")));
         }
@@ -150,6 +168,7 @@ public class DatabaseManager implements Closeable{
     @Override
     public void close(){
         onDestroy();
-        this.close();
+        // 就是不知道能不能用，之前就是这个方法导致内存泄露的
+//        this.close();
     }
 }

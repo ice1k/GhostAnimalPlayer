@@ -112,6 +112,23 @@ import static util.Constants.*;
  * 2015年12月15日：SQL的管理方法已经封装的差不多了，现在正在把他们搞到两个Activity里面
  * SQLite爆内存。。。内心是崩溃的。。
  * 试试少产生一些对象，我估计可以、、、赌一把。。
+ * 2015年12月17日：昨天把读写文件名、重命名和删除搞好了
+ * 当时由于太高兴太幸福太兴奋，忘了写日志了、、、今天补上、、
+ * 今天的目标是解决声音放不出来的问题（有可能是读，有可能是写）。
+ * 旷英语课，开写！！！
+ * 2015年12月21日：现在发现是初始化的顺序有问题，但是解决了之后还是闪退
+ * 闪退的问题解决了，原因是没有close，close不能自己随随便便implement
+ * 了closable就close，这是闪退的根源所在。
+ * 然后我发现还是有问题，就决定直接建表、拿表名创建一组鬼畜
+ * 老子就不信了！！！妈蛋啊啊啊啊啊啊啊啊啊老子的光阴啊
+ *
+ *
+ * Ohhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh!!!!
+ * 新方法是可行的！！！！！！！！！！！！！！！！！！！！！！！！！！！
+ * 我成功了！！！噢啦噢啦噢啦噢啦~~~~~~~~~~~~~~
+ * 直接在机房咆哮了10秒钟、、、卧槽嗓子疼~~
+ * 幸福幸福
+ * 2015年12月23日：现在开始限制用户输入特殊字符、增强健壮性。
  ***************************************************************************************************
  */
 public class MainActivity extends AppCompatActivity {
@@ -130,7 +147,7 @@ public class MainActivity extends AppCompatActivity {
 
     private String fileName;
     private DatabaseManager manager;
-//    private ArrayList<OneSound> sounds;
+    private ArrayList<OneSound> sounds;
 //    private LayoutAnimationController slideInController;
 //    private LayoutAnimationController slideOutController;
 //    private FileInputStream fileInputStream;
@@ -315,8 +332,8 @@ public class MainActivity extends AppCompatActivity {
             fuck = timeCounter - lastTime;
 //        输出调试信息
         Log.v(MY_TAG,"id = " + id + " ; fuck = " + fuck);
-//        sounds.add(new OneSound(FILENAME, id, fuck, idCounter));
-        manager.addSound(FILENAME, id, fuck, idCounter);
+        sounds.add(new OneSound(id, fuck, idCounter));
+//        manager.addSound(FILENAME, id, fuck, idCounter);
         idCounter++;
     }
 
@@ -329,7 +346,7 @@ public class MainActivity extends AppCompatActivity {
         //e.printStackTrace();
         //}
         manager = new DatabaseManager(this);
-//        sounds = new ArrayList<>();
+        sounds = new ArrayList<>();
 
         fileName = manager.findSoundGroupName();
 //            fileNamesIn = openFileInput(FILENAMES);
@@ -378,7 +395,7 @@ public class MainActivity extends AppCompatActivity {
 //        }
     }
 
-    // 结束播放方法
+    /** 结束播放方法 */
     private void stopPlaying(){
 //        recordCounter++;
 //        isWriting = false;
@@ -390,9 +407,10 @@ public class MainActivity extends AppCompatActivity {
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }
-//        manager.addSounds(sounds);
+        manager.addSounds(fileName, sounds);
+
         Log.d(MY_TAG, "stop writing");
-//        manager.close();
+        manager.close();
 //        startActivity(new Intent(this, RecordsActivity.class));
 //        finish();
     }

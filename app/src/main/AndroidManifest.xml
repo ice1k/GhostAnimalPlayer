@@ -1,55 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="player.comet.tesla.ghostanimalplayer"
-          xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="player.comet.tesla.ghostanimalplayer">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
-        android:maxSdkVersion="18"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-        android:maxSdkVersion="18"/>
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:name="player.comet.tesla.ghostanimalplayer.MyApplication"
-        android:supportsRtl="true"
         android:sharedUserId="android.uid.system"
+        android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="player.comet.tesla.ghostanimalplayer.MainActivity"
+            android:name=".MainActivity"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
-            android:name="player.comet.tesla.ghostanimalplayer.LoginActivity"
+            android:name=".LoginActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/FullScreenTheme">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name="player.comet.tesla.ghostanimalplayer.OptionActivity"
+            android:name=".OptionActivity"
             android:launchMode="standard"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
-            android:name="player.comet.tesla.ghostanimalplayer.Main2Activity"
+            android:name=".Main2Activity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AboutUsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RecordsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SettingsActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
         <activity
-            android:name="player.comet.tesla.ghostanimalplayer.AboutUsActivity"
+            android:name=".RenameOrDeleteActivity"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name="player.comet.tesla.ghostanimalplayer.RecordsActivity"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name="player.comet.tesla.ghostanimalplayer.SettingsActivity"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait">
-        </activity>
+            android:label="@string/alarm"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Dialog.Alert"/>
     </application>
 
 </manifest>

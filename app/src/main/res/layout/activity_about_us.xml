@@ -134,6 +134,18 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="@string/ProgramLeague_discription"
                  />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/app_github"
+                android:textColor="@color/linkColor"
+                android:id="@+id/Github"
+                android:linksClickable="true"
+                android:onClick="viewWeb"
+                />
+
         </LinearLayout>
     </ScrollView>
 

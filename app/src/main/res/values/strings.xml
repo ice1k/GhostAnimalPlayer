@@ -46,4 +46,5 @@
     <string name="alarm">来自萌萌的冰封的提醒</string>
     <string name="ask_again">冰封怕你点错了，再问你一遍：\n确定删除吗？</string>
     <string name="sure">确定</string>
+    <string name="app_github">本APP在github上的源代码</string>
 </resources>

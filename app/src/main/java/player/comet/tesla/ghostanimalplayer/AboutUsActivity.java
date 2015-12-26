@@ -2,7 +2,6 @@ package player.comet.tesla.ghostanimalplayer;
 
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
-import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -42,6 +41,9 @@ public class AboutUsActivity extends AppCompatActivity {
                 if(!joinQQGroup("1xAz-QGQL0FrWLWvBz_a5yE6aIv_64et")){
                     Toast.makeText(this,"抱歉，您未安装手机QQ，或安装的版本不支持，请升级。",Toast.LENGTH_SHORT).show();
                 }
+                break;
+            case R.id.Github:
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/ice1000/GhostAnimalPlayer")));
                 break;
             default:
                 break;

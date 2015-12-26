@@ -11,9 +11,19 @@
     android:orientation="vertical"
               android:background="#2db5b5">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/empty"
+        android:id="@+id/empty"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="gone" />
+
     <ListView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:id="@+id/listView"
         android:layout_gravity="center_horizontal"
         android:choiceMode="singleChoice"/>

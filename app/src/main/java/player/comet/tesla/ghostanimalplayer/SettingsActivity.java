@@ -10,7 +10,7 @@ import android.util.Log;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 
-import classes.Constants;
+import util.Constants;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -38,19 +38,17 @@ public class SettingsActivity extends AppCompatActivity {
         }
 
         aSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if( !isChecked ){
-                    editor.putBoolean(Constants.UISTYLE,false);
+                if (!isChecked) {
+                    editor.putBoolean(Constants.UISTYLE, false);
                     aSwitch.setText(R.string.windows);
-                }
-                else {
-                    editor.putBoolean(Constants.UISTYLE,true);
+                } else {
+                    editor.putBoolean(Constants.UISTYLE, true);
                     aSwitch.setText(R.string.classic);
                 }
                 editor.apply();
-                Log.d(Constants.MY_TAG,"onCheckChanged.");
+                Log.d(Constants.MY_TAG, "onCheckChanged.");
             }
         });
     }

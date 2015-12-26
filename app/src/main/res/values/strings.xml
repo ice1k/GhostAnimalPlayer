@@ -1,5 +1,5 @@
 ﻿<resources>
-    <string name="app_name">冰封の鬼畜</string>
+    <string name="app_name">鬼畜机</string>
     <string name="start_music_huiyecheng">播放輝夜の城で踊りたい</string>
     <string name="my_name">作者：千里冰封\n百度ID：@精灵谱尼</string>
     <string name="start_music_iloveyou">播放愛してるばんざーい!</string>
@@ -17,18 +17,26 @@
     <string name="about_me">关于作者</string>
     <string name="challenge_mode">挑战模式</string>
     <string name="not_available">当前功能暂未开放</string>
-    <string name="appreciate1">鸣谢\n创意提供&amp;iOS版制作：董海辰同学\n安卓版APP全部开发工作、90%的音源：千里冰封\n作者百度ID：@精灵谱尼\nUI设计与制作：为了做3D效果差点烧坏显卡的 @馃彠鈼\n录音系统创意：罗小衾\n\n</string>
-    <string name="appreciate2">特别感谢：\n我的好友：时光、Jerry、沧海、Timothy、苹果他们\n社团的同学们\n厕纸狂魔 @竹叶子兄\n我的朋友 @time昆少\n宅吧吧务 @long_smile3325\n\n</string>
-    <string name="appreciate3">我的严师：77.\n师出同门：留白、毛毛、梵音、88、66他们\n还有宅吧的那群死基佬，B站的那群损友们\n没有你们的陪伴就没有今天的我\n也谢谢大家对无脑科学的支持\n\n</string>
+    <string name="appreciate1"><![CDATA[鸣谢（参与开发工作的）：\n创意提供&iOS版制作：董海辰同学\n安卓版APP全部开发工作、90%的音源：千里冰封\n作者百度ID：@精灵谱尼\nUI设计与制作：为了做3D效果差点烧坏显卡的 @馃彠鈼\n录音系统创意：罗小衾\n\n]]></string>
+    <string name="appreciate2">特别感谢（陪伴我的伙伴）：\n我的好友：时光、Jerry、沧海、半夏、Timothy、苹果、Ricardo、Atom、果冻、Clandev他们\n还有张隆源那个死基佬 嘿嘿\n社团的同学们\n我的同学：何騄亨、吴沂隆\n厕纸狂魔 @竹叶子兄\n我的朋友 @time昆少\n宅吧吧务 @long_smile3325\n\n</string>
+    <string name="appreciate3">平时只管聊天的几个朋友：77.、留白、毛毛、梵音、88、66\n还有宅吧的那群死基佬，B站的那群损友们\n没有你们的陪伴就没有今天的我\n也谢谢大家对无脑科学的支持\n\n</string>
     <string name="website">工作室官网(建设ing)</string>
     <string name="teacher_blog">老师的blog(高能)</string>
     <string name="b_station">作者视频合辑(无脑科学)</string>
     <string name="by_me">——千里冰封</string>
     <string name="welcome_to_click_these">欢迎点击以下链接</string>
     <string name="my_records">我的作品</string>
-    <string name="loading">加载中</string>
+    <string name="loading">加载中。。。</string>
     <string name="settings">个人设置</string>
     <string name="choose_ui">界面选择</string>
     <string name="classic">经典</string>
     <string name="windows">WinP</string>
+    <string name="programLeague">推广：编程社区ProgramLeague</string>
+    <string name="options">选项</string>
+    <string name="website_discription">这是咱工作室的官网啦啦，董海辰同学还没开始搞哈哈，咱都是LL教徒所以看到什么奇怪的东西不要在意哈\n</string>
+    <string name="teacher_blog_discription">在下的师傅就是上面的77.了，他的blog当然要安利一下咯~\n</string>
+    <string name="BStation_discription">鄙人乃是B站up主一只，有时脑抽会发点视频，欢迎围观~求粉啊嚯呀~\n</string>
+    <string name="ProgramLeague_discription">中学生编程社区~欢迎加入~注：加入者请端正自己的行为，百度能查到的问题统统不予回答\n</string>
+    <string name="save">保存</string>
+    <string name="empty">这里还什么都没有喔~</string>
 </resources>

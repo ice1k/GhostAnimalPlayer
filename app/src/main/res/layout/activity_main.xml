@@ -3,29 +3,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="player.comet.tesla.ghostanimalplayer.MainActivity"
     android:background="#56c7c9">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_above="@+id/scrollView"
+        android:layout_height="wrap_content"
         android:background="#00ffffff"
         android:layout_alignParentTop="true"
         android:id="@+id/scrollView2"
-        android:layout_toLeftOf="@+id/chooseOptions"
-        android:layout_toStartOf="@+id/chooseOptions">
+        android:layout_alignRight="@+id/scrollView"
+        android:layout_alignEnd="@+id/scrollView"
+        android:layout_above="@+id/chooseOptions">
 
         <include layout="@layout/weapons" />
     </ScrollView>
 
     <ScrollView
         android:layout_width="wrap_content"
-        android:layout_height="80dp"
+        android:layout_height="60dp"
         android:id="@+id/scrollView"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
@@ -46,7 +42,7 @@
                 android:text="@string/start_music_huiyecheng"
                 android:id="@+id/startBGMHuiYeCity"
                 android:onClick="playBGM"
-                android:textColor="#5770c8" />
+                android:textColor="@color/linkColor" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -54,7 +50,7 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="@string/start_music_finally_animal_sister"
                 android:onClick="playBGM"
-                android:textColor="#5770c8"
+                android:textColor="@color/linkColor"
                 android:id="@+id/startBGMFinallyAnimalSister" />
 
             <TextView
@@ -64,10 +60,24 @@
                 android:text="@string/stop_music"
                 android:onClick="playBGM"
                 android:id="@+id/stopMusic"
-                android:textColor="#5770c8"/>
+                android:textColor="@color/linkColor"/>
 
         </LinearLayout>
     </ScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/chooseOptions"
+        android:onClick="showOptionsMenu"
+        android:text="@string/options"
+        android:textColor="@color/linkColor"
+        android:gravity="center"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/scrollView"
+        android:background="#00cba3" />
 
     <LinearLayout
         android:orientation="vertical"
@@ -76,9 +86,10 @@
         android:id="@+id/optionsMenu"
         android:visibility="invisible"
         tools:visibility="visible"
-        android:layout_below="@+id/chooseOptions"
-        android:layout_alignRight="@+id/scrollView2"
-        android:layout_alignEnd="@+id/scrollView2">
+        android:background="@color/colorPrimaryDark"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
 
         <TextView
             android:layout_width="70dp"
@@ -110,26 +121,15 @@
             <!--android:background="@drawable/button_on_click1"-->
             <!--android:gravity="center" />-->
 
-        <TextView
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:text="@string/delete_all"
-            android:id="@+id/deleteAll"
-            android:onClick="deleteAll"
-            android:layout_weight="1"
-            android:background="@drawable/button_on_click1"
-            android:gravity="center" />
+        <!--<TextView-->
+            <!--android:layout_width="70dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/delete_all"-->
+            <!--android:id="@+id/deleteAll"-->
+            <!--android:onClick="deleteAll"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/button_on_click1"-->
+            <!--android:gravity="center" />-->
     </LinearLayout>
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:src="@drawable/abc_ic_menu_moreoverflow_mtrl_alpha"
-        android:id="@+id/chooseOptions"
-        android:layout_marginRight="-10dp"
-        android:onClick="showOptionsMenu" />
 
 </RelativeLayout>

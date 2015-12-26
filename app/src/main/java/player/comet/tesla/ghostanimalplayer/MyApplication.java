@@ -2,7 +2,7 @@ package player.comet.tesla.ghostanimalplayer;
 
 import android.app.Application;
 
-import classes.PlayAudios;
+import util.PlayAudios;
 
 /**
  * Copyright 2015(c) Comet Corporation.

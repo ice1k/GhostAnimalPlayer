@@ -8,7 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="player.comet.tesla.ghostanimalplayer.AboutUsActivity"
-    android:background="#4e2df2">
+    android:background="#00ffe5">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -21,6 +21,13 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="30dp"
+                android:id="@+id/ncFloater" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -53,35 +60,73 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#FF3628BA"
+                android:textColor="@color/linkColor"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="@string/website"
                 android:id="@+id/studioWebsite"
                 android:linksClickable="true"
                 android:onClick="viewWeb"
-                android:textColorHighlight="#883199" />
+                 />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/website_discription"
+                 />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="@string/teacher_blog"
-                android:textColor="#FF3628BA"
+                android:textColor="@color/linkColor"
                 android:id="@+id/teacherBlog"
                 android:linksClickable="true"
                 android:onClick="viewWeb"
-                android:textColorHighlight="#883199" />
+                 />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/teacher_blog_discription"
+                 />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="@string/b_station"
-                android:textColor="#FF3628BA"
+                android:textColor="@color/linkColor"
                 android:id="@+id/bStation"
                 android:linksClickable="true"
                 android:onClick="viewWeb"
-                android:textColorHighlight="#883199" />
+                 />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/BStation_discription"
+                 />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/programLeague"
+                android:textColor="@color/linkColor"
+                android:id="@+id/ProgramLeague"
+                android:linksClickable="true"
+                android:onClick="viewWeb"
+                 />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/ProgramLeague_discription"
+                 />
         </LinearLayout>
     </ScrollView>
 

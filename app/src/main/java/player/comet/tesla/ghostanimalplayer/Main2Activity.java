@@ -4,18 +4,17 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import classes.PlayAudios;
+import util.PlayAudios;
 
 public class Main2Activity extends AppCompatActivity {
 
     private PlayAudios playAudios;
-    private MyApplication app;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        app = (MyApplication) getApplication();
+        MyApplication app = (MyApplication) getApplication();
         playAudios = app.getPlayAudios();
     }
 

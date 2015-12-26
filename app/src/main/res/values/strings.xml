@@ -47,4 +47,5 @@
     <string name="ask_again">冰封怕你点错了，再问你一遍：\n确定删除吗？</string>
     <string name="sure">确定</string>
     <string name="app_github">本APP在github上的源代码</string>
+    <string name="pc_url">部分浏览器可能打不开该网页，你也可以使用PC端打开该URL</string>
 </resources>

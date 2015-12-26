@@ -43,7 +43,7 @@ public class AboutUsActivity extends AppCompatActivity {
                 }
                 break;
             case R.id.Github:
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/ice1000/GhostAnimalPlayer/")));
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/ice1000/GhostAnimalPlayer")));
                 break;
             default:
                 break;

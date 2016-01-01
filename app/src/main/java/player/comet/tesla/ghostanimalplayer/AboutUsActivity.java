@@ -72,7 +72,6 @@ public class AboutUsActivity extends AppCompatActivity {
             // 未安装手Q或安装的版本不支持
             return false;
         }
-
     }
 
 

@@ -38,7 +38,7 @@ public class OptionActivity extends AppCompatActivity {
                 break;
             case R.id.testMode:
             case R.id.mTestMode:
-                Toast.makeText(this, R.string.loading,Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, R.string.loading,Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(OptionActivity.this, Main2Activity.class));
                 break;
             case R.id.aboutMe:
@@ -47,7 +47,7 @@ public class OptionActivity extends AppCompatActivity {
                 break;
             case R.id.myRecords:
             case R.id.mMyRecords:
-                Toast.makeText(this, R.string.loading,Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, R.string.loading,Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(OptionActivity.this, RecordsActivity.class));
                 break;
             case R.id.settings:

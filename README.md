@@ -1,8 +1,12 @@
-# GhostAnimalPlayer
+                                           `FBI warning`
 
-首先
-=========
-这是一个鬼♂畜制作器![tieba](https://github.com/ice1000/Shootplain/blob/master/app/src/main/res/drawable/graph2.png)、、、
+
+`federal law provides severe civil and criminal penalties for the unauthorized reproduction,distribution ,or exhibition of copyrighted motion pictures (title 17,united states code,sections 501 and 508),the federal bureau of investigation investigates allegations of criminal copyright infringement (title 17,united states code,section 506)`
+
+
+# GhostAnimalPlayer is:
+
+一个鬼♂畜制作器![tieba](https://github.com/ice1000/Shootplain/blob/master/app/src/main/res/drawable/graph2.png)、、、
 
 ![GMPlayer](https://github.com/ice1000/GhostAnimalPlayer/blob/master/app/src/main/res/mipmap-xxhdpi/ic_launcher.png)
 

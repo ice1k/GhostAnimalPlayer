@@ -11,18 +11,15 @@ import android.widget.Toast;
 
 public class AboutUsActivity extends AppCompatActivity {
 
-    private ImageView NC;
-    private AnimationDrawable NCFloating;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
 
-        NC = (ImageView) findViewById(R.id.ncFloater);
+        ImageView NC = (ImageView) findViewById(R.id.ncFloater);
         NC.setBackgroundResource(R.drawable.nc_floating);
 
-        NCFloating = (AnimationDrawable) NC.getBackground();
+        AnimationDrawable NCFloating = (AnimationDrawable) NC.getBackground();
         NCFloating.start();
     }
 

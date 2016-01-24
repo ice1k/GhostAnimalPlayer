@@ -35,8 +35,8 @@ public class DatabaseOpenHelper extends SQLiteOpenHelper implements Closeable{
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("ALTER TABLE ice1000 ADD COLUMN other STRING");
-        db.execSQL("ALTER TABLE names ADD COLUMN other STRING");
+        db.execSQL("ALTER TABLE ice1000 ADD COLUMN other TEXT");
+        db.execSQL("ALTER TABLE names ADD COLUMN other TEXT");
     }
 
     @Override

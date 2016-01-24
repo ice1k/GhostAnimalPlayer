@@ -1,9 +1,6 @@
 package util;
 
-/**
- * Created by Administrator on 2015/12/14 0014.
- */
-public class OneSound extends Object{
+public class OneSound {
 //    public String name;
     public int id;
     public int cnt;

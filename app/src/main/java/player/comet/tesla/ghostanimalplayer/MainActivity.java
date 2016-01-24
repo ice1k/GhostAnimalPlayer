@@ -320,7 +320,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-// 保存数据方法
+	/** 保存数据方法 */
     private void saveData(final int id){
 //        先把上次的time保存起来
         long lastTime = timeCounter;

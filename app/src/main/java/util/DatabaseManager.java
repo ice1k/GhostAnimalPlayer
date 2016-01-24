@@ -15,6 +15,7 @@ import static util.Constants.MY_TAG;
 import static util.DatabaseOpenHelper.*;
 
 /**
+ * 封装SQLite操作。
  * Created by Administrator on 2015/12/14 0014.
  */
 public class DatabaseManager implements Closeable{
@@ -168,7 +169,5 @@ public class DatabaseManager implements Closeable{
     @Override
     public void close(){
         onDestroy();
-        // 就是不知道能不能用，之前就是这个方法导致内存泄露的
-//        this.close();
     }
 }

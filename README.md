@@ -8,8 +8,10 @@
 一个鬼♂畜制作器![tieba](https://github.com/ice1000/Shootplain/blob/master/app/src/main/res/drawable/graph2.png)、、、<br/>
 ![GMPlayer](https://github.com/ice1000/GhostAnimalPlayer/blob/master/app/src/main/res/mipmap-xxhdpi/ic_launcher.png)<br/>
 
-特(cao)色(dian)：
-----------------
+# 相关文档
+1. [关于如何花式玩坏SQLite](https://github.com/ice1000/dialogs/blob/master/%E9%80%9A%E7%94%A8raw/%E8%A3%85%E9%80%BC%E8%AE%BA%E6%96%87/%E8%AE%BA%E6%96%87%E4%B8%80.pdf)
+
+# 特(cao)色(dian)：
 
 1. 最大的槽点就是花式使用SQLite![tieba](https://github.com/ice1000/Shootplain/blob/master/app/src/main/res/drawable/graph2.png)、、、、不信看[DatabaseManager](https://github.com/ice1000/GhostAnimalPlayer/blob/master/app/src/main/java/util/DatabaseManager.java)类![tieba](https://github.com/ice1000/Shootplain/blob/master/app/src/main/res/drawable/graph2.png)、、
 数据库使用SQLite，并且用一个表映射到一堆表里面![tieba](https://github.com/ice1000/Shootplain/blob/master/app/src/main/res/drawable/graph2.png)、、、
